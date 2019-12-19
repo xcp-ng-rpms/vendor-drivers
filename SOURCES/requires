@@ -1,7 +1,7 @@
 Requires: avago-megaraid-sas
 Requires: avago-mpt3sas
 Requires: broadcom-bnxt-en
-Requires: cheliso-cxgb4
+Requires: chelsio-cxgb4
 Requires: cisco-enic
 Requires: cisco-fnic
 Requires: emulex-lpfc

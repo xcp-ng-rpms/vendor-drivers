@@ -1,6 +1,6 @@
 Summary: Vendor drivers
 Name: vendor-drivers
-Version: 1.0.0
+Version: 1.0.1
 Release: 1%{?dist}
 License: GPLv2
 
