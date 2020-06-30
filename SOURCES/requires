@@ -10,6 +10,7 @@ Requires: intel-fm10k
 Requires: intel-i40e
 Requires: intel-igb
 Requires: intel-ixgbe
+Requires: microsemi-smartpqi
 Requires: qlogic-fastlinq
 Requires: qlogic-netxtreme2
 Requires: qlogic-qla2xxx
