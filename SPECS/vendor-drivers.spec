@@ -5,7 +5,7 @@
 Summary: Vendor drivers
 Name: vendor-drivers
 Version: 2.0.0
-Release: %{?xsrel}%{?dist}
+Release: %{?xsrel}.1%{?dist}
 License: Public Domain
 
 # This package has no source, no thing to prep, build or install, and no files.
@@ -30,11 +30,17 @@ Requires: qlogic-fastlinq
 Requires: qlogic-netxtreme2-4.19.0+1-modules
 Requires: qlogic-qla2xxx
 
+# XCP-ng additions
+Requires: igc-module
+
 %description
 Virtual package with dependencies on all vendor-provided kernel device drivers.
 
 %files
 
 %changelog
+* Wed Nov 02 2022 Samuel Verschelde <stormi-xcp@ylix.fr> - 2.0.0-1.1
+- Add igc-module to default installation
+
 * Wed Mar 23 2022 Alex Brett <alex.brett@citrix.com> - 2.0.0-1
 - Initial set of vendor-drivers for rolling release
