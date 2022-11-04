@@ -5,7 +5,7 @@
 Summary: Vendor drivers
 Name: vendor-drivers
 Version: 2.0.0
-Release: %{?xsrel}.1%{?dist}
+Release: %{?xsrel}.2%{?dist}
 License: Public Domain
 
 # This package has no source, no thing to prep, build or install, and no files.
@@ -32,6 +32,7 @@ Requires: qlogic-qla2xxx
 
 # XCP-ng additions
 Requires: igc-module
+Requires: r8125-module
 
 %description
 Virtual package with dependencies on all vendor-provided kernel device drivers.
@@ -39,6 +40,9 @@ Virtual package with dependencies on all vendor-provided kernel device drivers.
 %files
 
 %changelog
+* Fri Nov 04 2022 Samuel Verschelde <stormi-xcp@ylix.fr> - 2.0.0-1.2
+- Add r8125-module to default installation
+
 * Wed Nov 02 2022 Samuel Verschelde <stormi-xcp@ylix.fr> - 2.0.0-1.1
 - Add igc-module to default installation
 
