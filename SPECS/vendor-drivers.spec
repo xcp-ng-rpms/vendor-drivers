@@ -5,7 +5,7 @@
 Summary: Vendor drivers
 Name: vendor-drivers
 Version: 2.0.0
-Release: %{?xsrel}.2%{?dist}
+Release: %{?xsrel}.3%{?dist}
 License: Public Domain
 
 # This package has no source, no thing to prep, build or install, and no files.
@@ -27,6 +27,7 @@ Requires: intel-ixgbe
 Requires: mellanox-mlnxen
 Requires: microsemi-smartpqi
 Requires: qlogic-fastlinq
+Requires: qlogic-netxtreme2
 Requires: qlogic-netxtreme2-4.19.0+1-modules
 Requires: qlogic-qla2xxx
 
@@ -40,6 +41,9 @@ Virtual package with dependencies on all vendor-provided kernel device drivers.
 %files
 
 %changelog
+* Mon Nov 07 2022 Samuel Verschelde <stormi-xcp@ylix.fr> - 2.0.0-1.3
+- Add missing qlogic-netxtreme2
+
 * Fri Nov 04 2022 Samuel Verschelde <stormi-xcp@ylix.fr> - 2.0.0-1.2
 - Add r8125-module to default installation
 
