@@ -1,10 +1,10 @@
-%global package_speccommit b9f6afeb9e52462759ec83ef060c8a02518063f2
-%global usver 2.0.0
+%global package_speccommit c16557bda3f18eb006b73b8e516cfbdaf549a219
+%global usver 2.0.1
 %global xsver 1
 %global xsrel %{xsver}%{?xscount}%{?xshash}
 Summary: Vendor drivers
 Name: vendor-drivers
-Version: 2.0.0
+Version: 2.0.1
 Release: %{?xsrel}%{?dist}
 License: Public Domain
 
@@ -25,6 +25,7 @@ Requires: intel-ice
 Requires: intel-igb
 Requires: intel-ixgbe
 Requires: mellanox-mlnxen
+Requires: microsemi-aacraid
 Requires: microsemi-smartpqi
 Requires: qlogic-fastlinq
 Requires: qlogic-netxtreme2-4.19.0+1-modules
@@ -36,5 +37,8 @@ Virtual package with dependencies on all vendor-provided kernel device drivers.
 %files
 
 %changelog
+* Mon Jan 30 2023 Zhuangxuan Fei <zhuangxuan.fei@cloud.com> - 2.0.1-1
+- CA-374882: Add new driver microsemi-aacraid as requires
+
 * Wed Mar 23 2022 Alex Brett <alex.brett@citrix.com> - 2.0.0-1
 - Initial set of vendor-drivers for rolling release
