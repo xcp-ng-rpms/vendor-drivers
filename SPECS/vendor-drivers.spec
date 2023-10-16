@@ -5,7 +5,7 @@
 Summary: Vendor drivers
 Name: vendor-drivers
 Version: 2.0.1
-Release: %{?xsrel}.1%{?dist}
+Release: %{?xsrel}.2%{?dist}
 License: Public Domain
 
 # This package has no source, no thing to prep, build or install, and no files.
@@ -34,6 +34,7 @@ Requires: qlogic-qla2xxx
 
 # XCP-ng additions
 Requires: igc-module
+Requires: mpi3mr-module
 Requires: r8125-module
 
 %description
@@ -42,6 +43,9 @@ Virtual package with dependencies on all vendor-provided kernel device drivers.
 %files
 
 %changelog
+* Thu Oct 12 2023 Yann Dirson <yann.dirson@vates.tech> - 2.0.1-1.2
+- Add mpi3mr-module
+
 * Wed Feb 21 2023 Samuel Verschelde <stormi-xcp@ylix.fr> - 2.0.1-1.1
 - Update to 2.0.1-1
 - *** Upstream changelog ***
