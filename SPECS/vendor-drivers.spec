@@ -1,7 +1,7 @@
 Summary: Vendor drivers
 Name: vendor-drivers
 Version: 1.0.2
-Release: 1.3%{?dist}
+Release: 1.5%{?dist}
 License: GPLv2
 
 Source0: SOURCES/vendor-drivers/requires
@@ -12,12 +12,18 @@ Source0: SOURCES/vendor-drivers/requires
 # auto-generated Requires list
 %{lua: f = io.open(rpm.expand("%{_sourcedir}").."/requires") if f ~= nil then print(f:read "*a") f:close() end }
 
+ # XCP-ng additions
+Requires: mpi3mr-module
+
 %description
 Virtual package with dependencies on all vendor-provided kernel device drivers.
 
 %files
 
 %changelog
+* Thu Oct 16 2023 Yann Dirson <yann.dirson@vates.tech> - 1.0.2-1.5
+- Add mpi3mr-module
+
 * Thu Feb 24 2022 Samuel Verschelde <stormi-xcp@ylix.fr> - 1.0.2-1.3
 - Revert previous change
 
