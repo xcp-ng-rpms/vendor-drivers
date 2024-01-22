@@ -1,10 +1,10 @@
-%global package_speccommit c16557bda3f18eb006b73b8e516cfbdaf549a219
-%global usver 2.0.1
+%global package_speccommit adebaed1a0db57d8c3f6c4051dfb94cb4eafcec7
+%global usver 2.0.2
 %global xsver 1
 %global xsrel %{xsver}%{?xscount}%{?xshash}
 Summary: Vendor drivers
 Name: vendor-drivers
-Version: 2.0.1
+Version: 2.0.2
 Release: %{?xsrel}%{?dist}
 License: Public Domain
 
@@ -14,6 +14,7 @@ BuildArch: noarch
 Requires: avago-megaraid-sas
 Requires: avago-mpt3sas
 Requires: broadcom-bnxt-en
+Requires: broadcom-mpi3mr
 Requires: chelsio-cxgb4
 Requires: cisco-enic
 Requires: cisco-fnic
@@ -37,6 +38,9 @@ Virtual package with dependencies on all vendor-provided kernel device drivers.
 %files
 
 %changelog
+* Wed Nov 22 2023 Mark Syms <mark.syms@citrix.com> - 2.0.2-1
+- Add broadcom-mpi3mr to required drivers
+
 * Mon Jan 30 2023 Zhuangxuan Fei <zhuangxuan.fei@cloud.com> - 2.0.1-1
 - CA-374882: Add new driver microsemi-aacraid as requires
 
