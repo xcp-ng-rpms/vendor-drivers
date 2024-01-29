@@ -14,7 +14,8 @@ BuildArch: noarch
 Requires: avago-megaraid-sas
 Requires: avago-mpt3sas
 Requires: broadcom-bnxt-en
-Requires: broadcom-mpi3mr
+# XCP-ng: we packaged mpi3mr ourselves as mpi3mr-module
+#Requires: broadcom-mpi3mr
 Requires: chelsio-cxgb4
 Requires: cisco-enic
 Requires: cisco-fnic
@@ -35,6 +36,7 @@ Requires: qlogic-qla2xxx
 
 # XCP-ng additions
 Requires: igc-module
+Requires: mpi3mr-module
 Requires: r8125-module
 
 %description
@@ -45,7 +47,7 @@ Virtual package with dependencies on all vendor-provided kernel device drivers.
 %changelog
 * Mon Jan 22 2024 Samuel Verschelde <stormi-xcp@ylix.fr> - 2.0.2-1.1
 - Rebase on 2.0.2-1
-- Removed dependency to our mpi3mr-module RPM, replaced by upstream's broadcom-mpi3mr RPM
+- Keep dependency to our mpi3mr-module RPM instead of upstream's new but older broadcom-mpi3mr RPM
 - *** Upstream changelog ***
 - * Wed Nov 22 2023 Mark Syms <mark.syms@citrix.com> - 2.0.2-1
 - - Add broadcom-mpi3mr to required drivers
