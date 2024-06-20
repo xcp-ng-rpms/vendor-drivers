@@ -1,10 +1,10 @@
-%global package_speccommit adebaed1a0db57d8c3f6c4051dfb94cb4eafcec7
-%global usver 2.0.2
+%global package_speccommit 455bb56d5269638a6da4c036a2246a12900be34f
+%global usver 2.0.3
 %global xsver 1
 %global xsrel %{xsver}%{?xscount}%{?xshash}
 Summary: Vendor drivers
 Name: vendor-drivers
-Version: 2.0.2
+Version: 2.0.3
 Release: %{?xsrel}.1%{?dist}
 License: Public Domain
 
@@ -25,6 +25,7 @@ Requires: intel-fm10k
 Requires: intel-i40e
 Requires: intel-ice
 Requires: intel-igb
+Requires: intel-igc
 Requires: intel-ixgbe
 Requires: mellanox-mlnxen
 Requires: microsemi-aacraid
@@ -35,7 +36,6 @@ Requires: qlogic-netxtreme2-4.19.0+1-modules
 Requires: qlogic-qla2xxx
 
 # XCP-ng additions
-Requires: igc-module
 Requires: mpi3mr-module
 Requires: r8125-module
 
@@ -45,6 +45,13 @@ Virtual package with dependencies on all vendor-provided kernel device drivers.
 %files
 
 %changelog
+* Thu Jun 20 2024 Samuel Verschelde <stormi-xcp@ylix.fr> - 2.0.3-1.1
+- Rebase on 2.0.3-1
+- Switch dependency from our igc-module to the new intel-igc
+- *** Upstream changelog ***
+- * Fri Apr 19 2024 Stephen Cheng <stephen.cheng@cloud.com> - 2.0.3-1
+- - Add intel-igc to required drivers
+
 * Mon Jan 22 2024 Samuel Verschelde <stormi-xcp@ylix.fr> - 2.0.2-1.1
 - Rebase on 2.0.2-1
 - Keep dependency to our mpi3mr-module RPM instead of upstream's new but older broadcom-mpi3mr RPM
