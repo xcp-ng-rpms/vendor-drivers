@@ -1,7 +1,7 @@
 Summary: Vendor drivers
 Name: vendor-drivers
 Version: 1.0.2
-Release: 1.6%{?dist}
+Release: 1.7%{?dist}
 License: GPLv2
 
 Source0: SOURCES/vendor-drivers/requires
@@ -17,7 +17,7 @@ Requires: mpi3mr-module
 Requires: r8125-module
 
 # XCP-ng: not exactly a "vendor" driver since it's a backport from linux
-Requires: igc-module
+Requires: intel-igc
 
 %description
 Virtual package with dependencies on all vendor-provided kernel device drivers.
@@ -25,6 +25,9 @@ Virtual package with dependencies on all vendor-provided kernel device drivers.
 %files
 
 %changelog
+* Tue Oct 01 2024 Thierry Escande <thierry.escande@vates.tech> - 1.0.2-1.7
+- Rename igc-module dependency to intel-igc
+
 * Thu Nov 21 2023 Samuel Verschelde <stormi-xcp@ylix.fr> - 1.0.2-1.6
 - Require r8125-module and igc-module, for good this time
 
