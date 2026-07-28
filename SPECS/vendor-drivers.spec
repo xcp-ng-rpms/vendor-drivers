@@ -5,7 +5,7 @@
 Summary: Vendor drivers
 Name: vendor-drivers
 Version: 2.0.3
-Release: %{?xsrel}.1%{?dist}
+Release: %{?xsrel}.2%{?dist}
 License: Public Domain
 
 # This package has no source, no thing to prep, build or install, and no files.
@@ -28,7 +28,6 @@ Requires: intel-igb
 Requires: intel-igc
 Requires: intel-ixgbe
 Requires: mellanox-mlnxen
-Requires: microsemi-aacraid
 Requires: microsemi-smartpqi
 Requires: qlogic-fastlinq
 Requires: qlogic-netxtreme2
@@ -45,6 +44,9 @@ Virtual package with dependencies on all vendor-provided kernel device drivers.
 %files
 
 %changelog
+* Thu Jun 04 2026 Julian Vetter <julian.vetter@vates.tech> - 2.0.3-1.2
+- Remove microsemi-aacraid dependency; fall back to in-kernel aacraid driver
+
 * Thu Jun 20 2024 Samuel Verschelde <stormi-xcp@ylix.fr> - 2.0.3-1.1
 - Rebase on 2.0.3-1
 - Switch dependency from our igc-module to the new intel-igc
