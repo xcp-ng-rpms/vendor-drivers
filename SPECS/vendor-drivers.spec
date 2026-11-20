@@ -5,7 +5,7 @@
 Summary: Vendor drivers
 Name: vendor-drivers
 Version: 2.0.3
-Release: %{?xsrel}.3%{?dist}
+Release: %{?xsrel}.3.kernelpreview.1%{?dist}
 License: Public Domain
 
 # This package has no source, no thing to prep, build or install, and no files.
@@ -43,6 +43,9 @@ Virtual package with dependencies on all vendor-provided kernel device drivers.
 %files
 
 %changelog
+* Fri Nov 20 2026 Quentin Casasnovas <quentin.casasnovas@vates.tech> - 2.0.3-1.3.kernelpreview.1
+- Rebuild for testing in user label with updated package [do not ship]
+
 * Tue Nov 17 2026 Quentin Casasnovas <quentin.casasnovas@vates.tech> - 2.0.3-1.3
 - Drop qlogic-netxtreme2-4.19.0+1-modules dependency, now merged into
   qlogic-netxtreme2 which is already required
