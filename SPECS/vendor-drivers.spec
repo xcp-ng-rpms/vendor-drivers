@@ -5,7 +5,7 @@
 Summary: Vendor drivers
 Name: vendor-drivers
 Version: 2.0.3
-Release: %{?xsrel}.3%{?dist}
+Release: %{?xsrel}.3.0.testv0.1%{?dist}
 License: Public Domain
 
 # This package has no source, no thing to prep, build or install, and no files.
